@@ -52,21 +52,21 @@ install.packages("devtools")
 devtools::install_github("leffj/mctoolsr")
 
 # R packages required for this tutorial
-suppressMessages(library(mctoolsr)) # For inputting, rarefying, filtering, taxonomic analyses
-suppressMessages(library(plyr)) # For hulls
-suppressMessages(library(tidyverse)) # For data manipulation and plotting
-suppressMessages(library(RColorBrewer)) # For color palettes
-suppressMessages(library(vegan)) # For alpha and beta diversity analyses
-suppressMessages(library(indicspecies)) # For indicator species
-suppressMessages(library(car)) # For Levene Test and ANOVA
-suppressMessages(library(PMCMRplus)) # For Nemenyi posthoc test
-suppressMessages(library(ggh4x)) # For nested facet plots
-suppressMessages(library(emmeans)) # For pairwise comparisons
-suppressMessages(library(multcomp)) # For automated significant difference letters
-suppressMessages(library(zCompositions)) # CLR
-suppressMessages(library(compositions)) # Aitchison
-suppressMessages(library(reshape2)) # For melting
-suppressMessages(library(cowplot)) # For plotting
+library(mctoolsr) # For inputting, rarefying, filtering, taxonomic analyses
+library(plyr) # For hulls
+library(tidyverse) # For data manipulation and plotting
+library(RColorBrewer) # For color palettes
+library(vegan) # For alpha and beta diversity analyses
+library(indicspecies) # For indicator species
+library(car) # For Levene Test and ANOVA
+library(PMCMRplus) # For Nemenyi posthoc test
+library(ggh4x) # For nested facet plots
+library(emmeans) # For pairwise comparisons
+library(multcomp) # For automated significant difference letters
+library(zCompositions) # CLR
+library(compositions) # Aitchison
+library(reshape2) # For melting
+library(cowplot) # For plotting
 
 ```
 
@@ -96,7 +96,7 @@ suppressMessages(library(cowplot)) # For plotting
 # You might see ASV or OTU in this tutorial, but they mean the same thing!
 
 # Loading OTU Table with taxonomy
-tax_table_fp = system.file('extdata', 'fruits_veggies_taxa_table_wTax.biom', 
+tax_table_fp = system.file('extdata', 'fruits_veggies_taxa_table_wTax.txt', 
                            package = 'mctoolsr')
 
 # The above data just tells us how many sequencing reads came back in each sample, and what microbes they are.
