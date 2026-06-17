@@ -171,12 +171,12 @@ input_filt <- input
 # For all filtering steps, taxa removed will be output, make note of this for methods section. Also sometimes it will say "Taxa not found" if it is not found. That is an error and the dataset will not be altered. The search is case sensitive.
 
 # This filters out any ASVs from input dataframe ("input_filt") not assigned to a phylum (at taxonomy level 2 = "NA") 
-input_filt <- filter_taxa_from_input(input_filt, 
-                                     at_spec_level = 2, 
-                                     taxa_to_remove = "unclassified") # 978
+# input_filt <- filter_taxa_from_input(input_filt, 
+#                                    at_spec_level = 2, 
+#                                     taxa_to_remove = "unclassified") # 978
 
 # New versions call it NA
-#input_filt <- filter_taxa_from_input(input_filt, at_spec_level = 2, taxa_to_remove = "NA")
+input_filt <- filter_taxa_from_input(input_filt, at_spec_level = 2, taxa_to_remove = "NA")
 
 # Filtering out mitochondria sequences from the filtered input dataset.
 input_filt <- filter_taxa_from_input(input_filt, 
